@@ -65,7 +65,7 @@ class Task(models.Model):
         help_text="Task's continuous Score, can vary from 1.0 to 7.0.",
         validators=[MinValueValidator(1.0), MaxValueValidator(7.0)]
     )
-    campaign = models.ManyToManyField(Campaign, ralated_name="tasks", help_text="Member's Campaign Foreign keys.")
+    campaign = models.ManyToManyField(Campaign, related_name="tasks", help_text="Member's Campaign Foreign keys.")
     trainer = models.ManyToManyField(
         Member,
         related_name="tasks",
