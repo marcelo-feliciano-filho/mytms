@@ -4,6 +4,10 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Campaign(models.Model):
+    """
+    Campaign -> This Model has a Unique ID given by a UUID key, also each campaign has a name and a creation/update
+    dates.
+    """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, help_text="Campaign Unique ID.")
     name = models.CharField(max_length=255, help_text="Campaign Name.")
     created_at = models.DateTimeField(auto_now_add=True, help_text="Date and time when the campaign was created.")
@@ -19,6 +23,10 @@ class Campaign(models.Model):
 
 
 class Member(models.Model):
+    """
+    Member -> This model presents the member's management, which focus on their role, emails, full names, campaigns and
+    the date the member was registered and their latest updates.
+    """
     ROLE_CHOICES = (
         ("Trainer", "trainer"),
         ("Lead", "lead")
@@ -40,6 +48,10 @@ class Member(models.Model):
 
 
 class Task(models.Model):
+    """
+    Task -> This model presents the whole task management, who's the task was assigned, both trainer and lead.
+    Therefore, the model also holds the tasks' campaign, score, creation date, update date and status.
+    """
     STATUS_CHOICES = (
         ("in progress", "In Progress"),
         ("pending", "Pending"),
