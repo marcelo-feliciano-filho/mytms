@@ -10,5 +10,5 @@ router.register(r"tasks", TaskViewSet)
 
 urlpatterns = [
     path("tms_manager/admin/", admin.site.urls),
-    path("/api", include(router.urls))
+    path("api", include(router.urls))
 ]

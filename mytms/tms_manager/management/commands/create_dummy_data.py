@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from ....tms_manager.models import Campaign, Member, Task
+from tms_manager.models import Campaign, Member, Task
 import random
 import uuid
 
