@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from ..tms_manager.views import CampaignViewSet, MemberViewSet, TaskViewSet
+from tms_manager.views import CampaignViewSet, MemberViewSet, TaskViewSet
 
 router = DefaultRouter()
 router.register(r"campaigns", CampaignViewSet)
