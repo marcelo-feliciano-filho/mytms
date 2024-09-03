@@ -1,0 +1,29 @@
+
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+G
+mytms/mytms/settings.py,d\0\d08f8b520f61fd2698e6c9973a398de17d8d2122
+E
+mytms/mytms/models.py,b\c\bca07c06a7e17fe6e472e8907b64d42cbe5eb1ea
+K
+mytms/tms_manager/models.py,4\4\44139324bab4d4be83aeee12065ec098ca8f86be
+J
+mytms/tms_manager/tests.py,8\f\8fbe014628b585cf3281b2ed6bbda0c7ac95fe0d
+I
+mytms/tms_manager/apps.py,2\d\2dd4ccb57bd32d646a323b6dd5ea33741e12cf9f
+J
+mytms/tms_manager/admin.py,6\7\67ecd86b47a82e7c0daaa9ccb33837d12c64f2fa
+C
+mytms/mytms/urls.py,5\b\5b4a3e887252f28714b37b0c0106772af9d8899b
+_
+/mytms/tms_manager/commands/create_dummy_data.py,4\6\469dd703a881c9f2c7c2f1ed4b938b4450d61278
+j
+:mytms/tms_manager/management/commands/create_dummy_data.py,8\a\8a395af15203ce3189ba397a845dacb1bf31afad
+d
+4mytms/mytms/management/commands/create_dummy_data.py,8\9\8952595a99f275407adcd1ba22b445304a610982
+J
+mytms/tms_manager/views.py,0\a\0a87a87658fbb5be142a7207a72972923651ed19
+P
+ mytms/tms_manager/serializers.py,2\c\2cbf338a50295907fe14b62993e2e0cdca16f389
+O
+mytms/evaluation_notebook.ipynb,8\9\8981af57c60edcf006c5b5a97163d7aa8f13f62a
