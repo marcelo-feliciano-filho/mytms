@@ -12,6 +12,7 @@ class Campaign(models.Model):
     name = models.CharField(max_length=255, help_text="Campaign Name.")
     created_at = models.DateTimeField(auto_now_add=True, help_text="Date and time when the campaign was created.")
     updated_at = models.DateTimeField(auto_now=True, help_text="Date and time when the campaign was updated.")
+    objects = models.Manager()
 
     class Meta:
         ordering = ['name']
@@ -37,6 +38,7 @@ class Member(models.Model):
     campaign = models.ManyToManyField(Campaign, related_name="members", help_text="Member's Campaign Foreign keys.")
     created_at = models.DateTimeField(auto_now_add=True, help_text="Date and time when the member was created.")
     updated_at = models.DateTimeField(auto_now=True, help_text="Date and time when the member was updated.")
+    objects = models.Manager()
 
     class Meta:
         ordering = ['full_name']
@@ -80,6 +82,7 @@ class Task(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True, help_text="Date and time when the task was created.")
     updated_at = models.DateTimeField(auto_now=True, help_text="Date and time when the task was updated.")
+    objects = models.Manager()
 
     class Meta:
         ordering = ['name']
