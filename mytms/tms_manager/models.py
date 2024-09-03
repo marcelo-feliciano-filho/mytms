@@ -67,15 +67,17 @@ class Task(models.Model):
         help_text="Task's continuous Score, can vary from 1.0 to 7.0.",
         validators=[MinValueValidator(1.0), MaxValueValidator(7.0)]
     )
-    campaign = models.ManyToManyField(Campaign, related_name="tasks", help_text="Member's Campaign Foreign keys.")
-    trainer = models.ManyToManyField(
+    campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE, related_name="tasks", help_text="Member's Campaign Foreign keys.")
+    trainer = models.ForeignKey(
         Member,
+        on_delete=models.CASCADE,
         related_name="tasks",
         limit_choices_to={"role": "Trainer"},
         help_text="Member's (trainer) Campaign Foreign keys."
     )
-    lead = models.ManyToManyField(
+    lead = models.ForeignKey(
         Member,
+        on_delete=models.CASCADE,
         related_name="reviewed_tasks",
         limit_choices_to={"role": "Lead"},
         help_text="Member's (trainer) Campaign Foreign keys."
