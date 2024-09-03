@@ -67,7 +67,9 @@ class Task(models.Model):
         help_text="Task's continuous Score, can vary from 1.0 to 7.0.",
         validators=[MinValueValidator(1.0), MaxValueValidator(7.0)]
     )
-    campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE, related_name="tasks", help_text="Member's Campaign Foreign keys.")
+    campaign = models.ForeignKey(
+        Campaign, on_delete=models.CASCADE, related_name="tasks", help_text="Member's Campaign Foreign keys."
+    )
     trainer = models.ForeignKey(
         Member,
         on_delete=models.CASCADE,

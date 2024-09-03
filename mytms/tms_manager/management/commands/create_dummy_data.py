@@ -17,7 +17,7 @@ class Command(BaseCommand):
         for i in range(10):
             member = Member.objects.create(
                 role=random.choice(roles),
-                email=f"user{i}@dummy.com",
+                email=f"user{i*5+random.randint(1,100)}@dummy.com",
                 full_name=f"User {i}"
             )
             members.append(member)
@@ -31,7 +31,7 @@ class Command(BaseCommand):
                 id=uuid.uuid4(),
                 status=random.choice(["in progress", "pending", "submitted", "reviewed"]),
                 name=f"Task {i}",
-                score=random.randint(0,100),
+                score=random.randint(100,200),
                 campaign=random.choice(campaigns),
                 trainer=random.choice([member for member in members if member.role == "trainer"]),
                 lead=random.choice([member for member in members if member.role == "trainer"]),
